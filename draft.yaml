@@ -1,0 +1,27 @@
+models:
+  Equipment:
+      name: string
+      description: string
+      quantity: string
+      status: string
+      purchase_date: timestamp
+      date_encoded: timestamp
+      employee_id: unsignedInteger
+      relationships:
+        belongsTo: Employee
+
+  Employee:
+    name: string
+    department: string
+    position: string
+    branch_id: unsignedInteger
+    relationships:
+      HasMany: Equipment
+
+seeders: Equipment, Employee
+
+
+
+
+
+
