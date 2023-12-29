@@ -14,10 +14,13 @@ return new class extends Migration
         Schema::create('equipment', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('serial_number');
             $table->string('description');
+            $table->string('qr_code');
             $table->string('quantity');
             $table->string('status');
-            $table->timestamp('purchase_date');
+            $table->date('purchase_date');
+            $table->date('date_acquire');
             $table->timestamp('date_encoded');
             $table->foreignId('employee_id');
             $table->timestamps();

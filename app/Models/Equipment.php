@@ -17,10 +17,13 @@ class Equipment extends Model
      */
     protected $fillable = [
         'name',
+        'serial_number',
         'description',
+        'qr_code',
         'quantity',
         'status',
         'purchase_date',
+        'date_acquire',
         'date_encoded',
         'employee_id',
     ];
@@ -32,7 +35,9 @@ class Equipment extends Model
      */
     protected $casts = [
         'id' => 'integer',
+        'qr_code'=> 'string',
         'purchase_date' => 'timestamp',
+        'date_acquire' => 'timestamp',
         'date_encoded' => 'timestamp',
         'employee_id' => 'integer',
     ];

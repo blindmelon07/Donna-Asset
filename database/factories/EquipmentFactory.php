@@ -23,10 +23,12 @@ class EquipmentFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
+            'serial_number' => $this->faker->word(),
             'description' => $this->faker->text(),
             'quantity' => $this->faker->word(),
             'status' => $this->faker->word(),
             'purchase_date' => $this->faker->dateTime(),
+            'date_acquire' => $this->faker->dateTime(),
             'date_encoded' => $this->faker->dateTime(),
             'employee_id' => Employee::factory(),
         ];

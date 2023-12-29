@@ -1,13 +1,13 @@
 created:
     - database/factories/EquipmentFactory.php
     - database/factories/EmployeeFactory.php
-    - database/migrations/2023_12_29_033715_create_equipment_table.php
-    - database/migrations/2023_12_29_033716_create_employees_table.php
+    - database/migrations/2023_12_29_052112_create_equipment_table.php
+    - database/migrations/2023_12_29_052113_create_employees_table.php
     - app/Models/Equipment.php
     - app/Models/Employee.php
     - database/seeders/EquipmentSeeder.php
     - database/seeders/EmployeeSeeder.php
 models:
     User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string:100 nullable' }
-    Equipment: { name: string, description: string, quantity: string, status: string, purchase_date: timestamp, date_encoded: timestamp, employee_id: unsignedInteger, relationships: { belongsTo: Employee } }
+    Equipment: { name: string, serial_number: string, description: string, quantity: string, status: string, purchase_date: timestamp, date_acquire: timestamp, date_encoded: timestamp, employee_id: unsignedInteger, relationships: { belongsTo: Employee } }
     Employee: { name: string, department: string, position: string, branch_id: unsignedInteger, relationships: { HasMany: Equipment } }

@@ -1,10 +1,12 @@
 models:
   Equipment:
       name: string
+      serial_number: string
       description: string
       quantity: string
       status: string
       purchase_date: timestamp
+      date_acquire : timestamp
       date_encoded: timestamp
       employee_id: unsignedInteger
       relationships:
